@@ -1,11 +1,11 @@
 /*
 	Author: Kyle Viveiros
-	Date: 09/22/2020
+	Date: 09/25/2020
 	File Name: styles.css	*/
 
 /* CSS RESET */
 
-body, header, nav, main, footer, img, h1, h3 {
+body, header, nav, main, footer, img, h1, ul{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,14 +22,25 @@ img {
 	display: block;
 }
 
+/* Style rules for mobile viewport*/
+
+
+/*Hide tab-desk class*/
+
+.tab-desk {
+	display: none;
+}
+
 /* Style rule for header content */
 
+header {
+  text-align: center;
+  font-size: 1.5em;
+  color: #373684;
+ }
+
 header h1 {
-	padding: 3%;
-	text-align: center;
-	font-size: 3em;
-	font-family: Georgia, Times, serif;
-	color: #101a2d; 
+	font-family: 'DM Serif Display', serif;
 }
 
 /* Style rules for navigation area */
@@ -40,14 +51,14 @@ nav {
 
 nav ul {
 		list-style-type: none; 
-		margin: 0%;
 		text-align: Center;
 }
 
 nav li {
-	display: inline-block; 
+	display: block; 
 	font-size: 2em;
-}
+	border-top: 1px solid #e5e9fc;	
+	}
 
 nav li a {
 	display: block; 
@@ -62,7 +73,7 @@ nav li a {
 main {
 	padding: 2%;
 	background-color: #e5e9fc;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	overflow: auto;	
 }
 
@@ -71,36 +82,37 @@ main p {
 }
 
 .action {
-	color: #1d396d;
+  font-size: 1.25em;
+	color: #373684;
 	font-weight: bold;
-	font-style: italic;
-  text-decoration: none;
 }
 
-#piano #guitar #violin {
-	width: 29%;
-	float: left;
-	margin: 0 2%;
+#piano, #guitar, #violin, {
+    margin: 0 2%;
 }
 
-info {
-	clear: left;
-	background-color: #c0caf7;
-	padding: 1% 2%;
+#info {
+    clear: left;
+    background-color: #c0caf7;
+    padding: 1% 2%;
 }
 
-contact {
+#info ul {
+	margin-left: 10%;
+}
+
+#contact {
 	text-align: center;	
 }
 
-contact a {
+#contact a {
 	color: #4645a8;
 	text-decoration: none;
 	font-weight: bold;
 }
 
 .map {
-border: 5px solid #373684;
+  border: 5px solid #373684;
 }
 
 /* Style rules for footer content*/
