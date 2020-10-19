@@ -105,7 +105,22 @@ main p {
 	text-align: center;	
 }
 
-#contact a {
+.tel-link {
+    background-color: #373684;
+        padding: 2%;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        border-radius: 5px;
+} 
+.tel-link a {
+    color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        display: block;
+}
+
+#contact .email-link {
 	color: #4645a8;
 	text-decoration: none;
 	font-weight: bold;
@@ -113,6 +128,8 @@ main p {
 
 .map {
   border: 5px solid #373684;
+   width: 95%;
+  height: 50%;
 }
 
 /* Style rules for footer content*/
@@ -126,4 +143,68 @@ footer {
 footer a {
 	color: #e3eaf8;
 	text-decoration: none;
+}
+
+/*Media Query for Tablet Viewport */
+@media screen and (min-width: 550px), print {
+
+/*Tablet Viewport: Show tab-desk class, hide mobile class */
+
+.tab-desk {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+/* Tablet Viewport: Style rule for header content */
+
+span.tab-desk {
+	display: inline;
+}
+	
+/* Tablet Viewport: Style rules for nav area */
+	nav li {
+		display: inline-block;
+		font-size: 1.5em;
+		border-top: none;
+		border-right: 1px solid #e59fc;
+	}
+	nav-li:last-child {
+		border-right: none;
+	}
+	nav li a {
+		padding: 0.25em 0.5em;
+	}
+	/* Tablet Viewport: Style rule for map */
+	.map {
+		width: 500px;
+		height: 450px;
+	}
+}
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px), print {
+	
+ /* Desktop Viewport: Style rule for header */
+header {
+	padding: 2%;
+}	
+ /*Desktop Viewport: Style rules for nav area*/
+  nav li a {
+	 padding: 0.5em 1.5em 
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
