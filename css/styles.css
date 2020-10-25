@@ -5,7 +5,7 @@
 
 /* CSS RESET */
 
-body, header, nav, main, footer, img, h1, ul{
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,6 +22,12 @@ img {
 	display: block;
 }
 
+/* Style rule for box sizing applies to all elements*/
+
+{
+box-sizing: border-box;
+
+}
 /* Style rules for mobile viewport*/
 
 
@@ -47,6 +53,51 @@ header h1 {
 
 nav {
 	background-color: #373684;
+}
+
+aside {
+	text-align: center;
+
+	font-size: 1.5em;
+
+	font-weight: bold;
+
+	color: #373684;
+
+	text-shadow: 3px 3px 10px #8280cb;
+}
+
+figure {
+	position: relative;
+
+	max-width: 275px;
+
+	margin: 2% auto;
+
+	border: 8px solid #373684;	
+}
+
+
+figcaption {
+	position: absolute;
+
+	bottom: 0;
+
+	background: rgba(55, 54, 132, 0.7);
+
+	color: #fff;
+
+	width: 100%;
+
+	padding: 5% 0;
+
+	text-align: center;
+
+	font-family: Verdana, Arial, sans-serif;
+
+	font-size: 1.5em;
+
+	font-weight: bold;
 }
 
 nav ul {
@@ -87,7 +138,7 @@ main p {
 	font-weight: bold;
 }
 
-#piano, #guitar, #violin, {
+#piano, #guitar, #violin {
     margin: 0 2%;
 }
 
@@ -148,18 +199,28 @@ footer a {
 /*Media Query for Tablet Viewport */
 @media screen and (min-width: 550px), print {
 
-/*Tablet Viewport: Show tab-desk class, hide mobile class */
-
+/* Tablet Viewport: Show tab-desk class, hide mobile class */  
 .tab-desk {
-	display: block;
-}
+    display: block;
+} 
 .mobile {
-	display: none;
-}
-/* Tablet Viewport: Style rule for header content */
-
+    display: none;  
+} 
+ 
+ 
+ .grid {
+	display: grid; 
+	grid-template-columns: 2;
+	grid-gap: 20px;
+ }
+ 
+ aside {
+	 grid-columns: 1/span 2;
+ }
+ 
+/* Tablet Viewport: Style rule for header content */     
 span.tab-desk {
-	display: inline;
+    display: inline;
 }
 	
 /* Tablet Viewport: Style rules for nav area */
@@ -190,21 +251,31 @@ header {
 }	
  /*Desktop Viewport: Style rules for nav area*/
   nav li a {
-	 padding: 0.5em 1.5em 
+	 padding: 0.5em 1.5em; 
+  }
+  
+  nav li a:hover {
+	color: #373684;
+	background-color: #e5e9fc;
   }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	/* Desktop Viewport: Style rules for main content.*/
+	#info ul {
+		margin-left: 5%;
+	}
+	main h3 {
+		font-size: 1.5em;
+	}
+	#piano, #guitar, #violin {
+	width: 29%;
+    float: left;	
+	margin: 0, 2%;
+	}
+}
+/* Media Query for Print */
+@media print {
+	body {
+	background-color: #fff;
+	color: #000;
+	}
 }
