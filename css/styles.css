@@ -24,7 +24,7 @@ img {
 
 /* Style rule for box sizing applies to all elements*/
 
-{
+* { 
 box-sizing: border-box;
 
 }
@@ -125,39 +125,27 @@ aside {
 
 figure {
 	position: relative;
-
 	max-width: 275px;
-
 	margin: 2% auto;
-
 	border: 8px solid #373684;	
 }
 
 
 figcaption {
 	position: absolute;
-
 	bottom: 0;
-
 	background: rgba(55, 54, 132, 0.7);
-
 	color: #fff;
-
 	width: 100%;
-
 	padding: 5% 0;
-
 	text-align: center;
-
 	font-family: Verdana, Arial, sans-serif;
-
 	font-size: 1.5em;
-
 	font-weight: bold;
 }
 
 
-#contact #rental h2{
+#contact, #rental, #h2{
 	text-align: center;	
 }
 
@@ -225,17 +213,17 @@ fieldset, input {
 	margin-bottom: 2%
 }
 
-fieldset {
+fieldset:legend {
 	font-weight: bold;
 	padding-top: 3%;
+	font-size: 1.25em;
 }
 
-#submit {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: auto;
-	margin-right: auto;
+
+#form, #submit {
+	margin: 0, auto;
 	display: block;
+	padding: ;
 	background-color: b7b7e1;
 	font-size: 1em;
 }
@@ -285,7 +273,7 @@ span.tab-desk {
 	
 	.grid {
 	display: grid; 
-	grid-template-columns: 2;
+	grid-template-column:1/span 2;
 	grid-gap: 20px;
  }
  
@@ -303,10 +291,7 @@ span.tab-desk {
 	
 	form {
 		width: 70%;
-		margin-top: 0;
-		margin-bottom: 0;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0, auto;
 	}
 	
 	/* Tablet Viewport: Style rule for form elements*/
@@ -345,6 +330,11 @@ header {
 
 	main h3 {
 		font-size: 1.5em;
+	}
+
+	form {
+		width: 70%;
+		margin: 0, auto;
 	}
 
 	#piano, #guitar, #violin {
